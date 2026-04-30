@@ -18,25 +18,19 @@ skills/
 
 ### [kas-usdc-swap](skills/kas-usdc-swap/kas-usdc-swap.md)
 
-Buy and sell KAS using USDC across chains, routing through Igra L2. Fully gasless buy flow — users only need USDC.
+Buy and sell KAS using USDC across chains, routing through Igra.
 
-**What it does:**
 - **Buy KAS:** USDC (Ethereum/Base/Arbitrum/etc.) → Igra → swap → KAS on Kaspa L1
 - **Sell KAS:** KAS on Kaspa L1 → Igra → swap → USDC on any EVM chain
-
-**Key features:**
 - Gasless buy via ERC-4337 paymaster (zero iKAS needed, all gas paid in USDC)
 - Hyperlane cross-chain USDC bridging (6 source chains)
-- ZealousSwap DEX integration with known gotcha workarounds
-- KAT KasBridge exit with FROST threshold signing
 - Free IGRA native entry for sell flow
-- Full progress display with timing
 
 Demo: [buy](skills/kas-usdc-swap/demo/buy-kas.mp4) | [sell](skills/kas-usdc-swap/demo/sell-kas.mp4)
 
 ### [secrets-opsec](skills/secrets-opsec/secrets-opsec.md)
 
-Private key and secrets OPSEC rules for AI agents working with wallets and cryptographic credentials. Covers:
+OPSEC rules for AI agents working with wallets and cryptographic credentials.
 
 - What to never do with keys (logging, hardcoding, CLI args, persisting)
 - How to always handle keys (env vars, .env, chmod 600)
@@ -51,7 +45,8 @@ Private key and secrets OPSEC rules for AI agents working with wallets and crypt
 | Script | Purpose |
 |--------|---------|
 | [`generate-wallet.js`](skills/kas-usdc-swap/scripts/generate-wallet.js) | Generate EVM + Kaspa addresses from one key |
-| [`buy-kas.js`](skills/kas-usdc-swap/scripts/buy-kas.js) | Sequential buy flow (USDC → KAS) |
+| [`buy-kas-gasless.js`](skills/kas-usdc-swap/scripts/buy-kas-gasless.js) | Gasless buy flow via ERC-4337 (USDC → KAS) |
+| [`buy-kas.js`](skills/kas-usdc-swap/scripts/buy-kas.js) | Sequential buy flow (USDC → KAS, needs iKAS for gas) |
 | [`sell-kas.js`](skills/kas-usdc-swap/scripts/sell-kas.js) | Sequential sell flow (KAS → USDC) |
 | [`swap-roundtrip.js`](skills/kas-usdc-swap/scripts/swap-roundtrip.js) | Full round-trip with progress bars |
 | [`swap-demo.js`](skills/kas-usdc-swap/scripts/swap-demo.js) | Interactive demo with user prompts |
