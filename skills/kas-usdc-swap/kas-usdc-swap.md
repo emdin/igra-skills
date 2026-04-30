@@ -108,7 +108,7 @@ SELL KAS:  KAS (L1) → IGRA entry → Igra → swap → USDC → Hyperlane → 
 | EntryPoint v0.8 | `0x4337084D9E255Ff0702461CF8895CE9E3b5Ff108` |
 | SimpleAccountFactory | `0x13E9ed32155810FDbd067D4522C492D6f68E5944` |
 | ERC-20 Paymaster (USDC) | `0xe643D56CBd46b557b11753C6cA579a0da6486CF7` |
-| Bundler RPC | `https://bubundler.jobberwocky.co` |
+| Bundler RPC (ERC-4337) | `https://bubundler.jobberwocky.co` |
 | Hyperlane Mailbox | `0x3a867fCfFeC2B790970eeBDC9023E75B0a172aa7` |
 | IGRA entry address (L1) | `kaspa:ppvnxxzm0rr37zpnwux2f2ntvfpr4uqdpm7zsvsztg3en92r7gs0wkmr72q9n` |
 | Kaspa gRPC | `grpc://95.217.73.85:16110` (default; use any public kaspad node if unavailable) |
