@@ -1,0 +1,45 @@
+{
+  "$schema": "../../specs/erc7730-v2.schema.json",
+  "context": {
+    "$id": "IgraKasExitBridge",
+    "contract": {
+      "deployments": [
+        {
+          "chainId": 38833,
+          "address": "0x4bb88C213d3eD9dc4bae694f1bc1bF745903b2d0"
+        }
+      ]
+    }
+  },
+  "metadata": {
+    "owner": "Igra Labs",
+    "info": {
+      "url": "https://igra.network"
+    },
+    "contractName": "KasExitBridge"
+  },
+  "display": {
+    "formats": {
+      "requestExit(string kasPayoutAddress, uint64 unlockAmountSompi)": {
+        "intent": "Exit iKAS to Kaspa L1",
+        "fields": [
+          {
+            "label": "Kaspa destination",
+            "path": "#.kasPayoutAddress",
+            "format": "raw"
+          },
+          {
+            "label": "KAS amount (sompi)",
+            "path": "#.unlockAmountSompi",
+            "format": "raw"
+          },
+          {
+            "label": "iKAS burned",
+            "path": "@.value",
+            "format": "amount"
+          }
+        ]
+      }
+    }
+  }
+}
